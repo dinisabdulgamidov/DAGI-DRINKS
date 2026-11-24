@@ -1,369 +1,147 @@
-
-/* =================================
-   DAGI — PREMIUM WEBSITE
-================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* DAGI — яркий современный стиль */
+:root {
+  --ink: #17152b;
+  --muted: #686779;
+  --red: #f42e4f;
+  --orange: #ff8b36;
+  --yellow: #ffd84d;
+  --purple: #6d43d8;
+  --cream: #fffaf2;
 }
-
-html {
-    scroll-behavior: smooth;
-}
-
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #171717;
-    background: #ffffff;
-    line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.6;
 }
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* HEADER */
-
+a { color:inherit; text-decoration:none; }
 .header {
-    height: 90px;
-    padding: 0 7%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #ffffff;
-    border-bottom: 1px solid #eeeeee;
+  min-height:82px; padding:14px 7%; display:flex; align-items:center;
+  justify-content:space-between; gap:24px; background:rgba(255,255,255,.94);
+  border-bottom:1px solid rgba(23,21,43,.07); position:relative; z-index:2;
 }
-
-.logo {
-    font-size: 36px;
-    font-weight: 900;
-    letter-spacing: -2px;
-}
-
-.logo span {
-    color: #ed2939;
-}
-
-.navigation {
-    display: flex;
-    gap: 35px;
-}
-
-.navigation a {
-    font-size: 14px;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-.navigation a:hover {
-    color: #ed2939;
-}
-
+.logo { font-size:36px; font-weight:950; letter-spacing:-2px; }
+.logo span { color:var(--red); }
+.navigation { display:flex; align-items:center; gap:32px; }
+.navigation a { font-size:14px; font-weight:700; transition:color .2s; }
+.navigation a:hover { color:var(--red); }
 .header-button {
-    background: #171717;
-    color: white;
-    padding: 13px 23px;
-    border-radius: 5px;
-    font-size: 13px;
-    font-weight: bold;
-    transition: 0.3s;
+  background:var(--ink); color:white; padding:13px 22px; border-radius:999px;
+  font-size:13px; font-weight:800; transition:transform .2s, background .2s;
 }
-
-.header-button:hover {
-    background: #ed2939;
-}
-
-/* HERO */
+.header-button:hover { background:var(--red); transform:translateY(-2px); }
 
 .hero {
-    min-height: 600px;
-    padding: 70px 7%;
-    display: grid;
-    grid-template-columns: 0.85fr 1.15fr;
-    align-items: center;
-    gap: 35px;
-    overflow: hidden;
-    background: #f7f7f7;
+  min-height:570px; padding:76px 7%; display:grid;
+  grid-template-columns:.85fr 1.15fr; align-items:center; gap:42px;
+  overflow:hidden; position:relative;
+  background:radial-gradient(circle at 78% 15%,rgba(255,255,255,.65),transparent 25%),
+    linear-gradient(120deg,#fff0d6 0%,#ffd6c8 48%,#f8c9ef 100%);
 }
-
-.hero-content {
-    max-width: 520px;
+.hero:before,.hero:after {
+  content:""; position:absolute; border-radius:50%; pointer-events:none;
 }
-
-.eyebrow {
-    font-size: 12px;
-    letter-spacing: 3px;
-    font-weight: 800;
-    color: #ed2939;
-    margin-bottom: 22px;
-}
-
-.hero h1 {
-    font-size: clamp(52px, 6vw, 82px);
-    line-height: 0.98;
-    letter-spacing: -5px;
-    font-weight: 900;
-}
-
-.hero h1 span {
-    color: #ed2939;
-}
-
-.hero-description {
-    margin-top: 28px;
-    max-width: 420px;
-    color: #666666;
-    font-size: 17px;
-    line-height: 1.8;
-}
-
+.hero:before { width:230px; height:230px; background:rgba(255,216,77,.45); top:-100px; left:42%; }
+.hero:after { width:170px; height:170px; background:rgba(109,67,216,.12); bottom:-80px; right:4%; }
+.hero-content { max-width:520px; position:relative; z-index:1; }
+.eyebrow { font-size:11px; letter-spacing:3px; font-weight:900; color:var(--red); margin-bottom:18px; }
+.hero h1 { font-size:clamp(50px,6vw,82px); line-height:.98; letter-spacing:-5px; font-weight:950; }
+.hero h1 span { color:var(--red); }
+.hero-description { margin-top:24px; max-width:420px; color:#5e5361; font-size:17px; line-height:1.8; }
 .primary-button {
-    display: inline-block;
-    margin-top: 32px;
-    background: #ed2939;
-    color: white;
-    padding: 17px 29px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
-    transition: 0.3s;
+  display:inline-block; margin-top:28px; background:var(--red); color:white;
+  padding:16px 27px; border-radius:999px; font-size:14px; font-weight:800;
+  box-shadow:0 10px 24px rgba(244,46,79,.22); transition:.2s;
 }
-
-.primary-button:hover {
-    background: #c91d2d;
-    transform: translateY(-3px);
-}
-
-/* HERO IMAGE */
-
-.hero-image {
-    width: 100%;
-}
-
+.primary-button:hover { background:#d91e40; transform:translateY(-3px); }
+.hero-image { width:100%; position:relative; z-index:1; }
 .hero-image img {
-    width: 100%;
-    height: auto;
-    max-height: none;
-    display: block;
-    border-radius: 12px;
-    object-fit: contain;
+  display:block; width:100%; height:auto; object-fit:contain;
+  border-radius:22px; box-shadow:0 24px 60px rgba(87,48,74,.17);
 }
 
-/* PRODUCTS */
-
-.products-description {
-    max-width: 620px;
-    margin: 0 auto;
+/* Каталог */
+.products { padding:92px 7% 105px; text-align:center; background:#fff; }
+.products h2,.about h2,.partners h2 {
+  font-size:clamp(32px,4vw,48px); font-weight:950; letter-spacing:-2px; margin-bottom:14px;
 }
-
+.products-description { max-width:620px; margin:0 auto; color:var(--muted); font-size:16px; }
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 18px;
-    margin-top: 54px;
-    text-align: left;
+  display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:18px;
+  margin-top:46px; text-align:left;
 }
-
 .product-card {
-    min-width: 0;
-    overflow: hidden;
-    padding: 10px 10px 14px;
-    background: #ffffff;
-    border: 1px solid #eeeeee;
-    border-radius: 14px;
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.045);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  min-width:0; overflow:hidden; padding:10px 10px 14px; background:#fff;
+  border:1px solid #f0eaf0; border-radius:18px;
+  box-shadow:0 8px 25px rgba(40,25,65,.06);
+  transition:transform .25s,box-shadow .25s;
 }
-
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.09);
-}
-
+.product-card:hover { transform:translateY(-6px); box-shadow:0 16px 34px rgba(40,25,65,.13); }
 .product-card img {
-    display: block;
-    width: 100%;
-    height: 180px;
-    object-fit: contain;
-    background: #f7f7f7;
-    border-radius: 9px;
+  display:block; width:100%; height:180px; object-fit:contain;
+  background:linear-gradient(145deg,#fff3e9,#f3efff); border-radius:12px;
 }
+.product-card h3 { margin:10px 3px 0; font-size:15px; font-weight:850; line-height:1.35; }
 
-.product-card h3 {
-    margin: 10px 3px 0;
-    font-size: 15px;
-    font-weight: 800;
-    line-height: 1.35;
-}
-
-
-
-.products {
-    padding: 110px 7%;
-    text-align: center;
-}
-
-.products h2,
-.about h2,
-.partners h2 {
-    font-size: clamp(32px, 4vw, 48px);
-    font-weight: 900;
-    letter-spacing: -2px;
-    margin-bottom: 18px;
-}
-
-.products > p:not(.eyebrow) {
-    color: #777777;
-    font-size: 16px;
-}
-
-.product-photo {
-    margin-top: 55px;
-    overflow: hidden;
-    border-radius: 12px;
-}
-
-.product-photo img {
-    display: block;
-    width: 100%;
-}
-
-/* ABOUT */
-
+/* О бренде */
 .about {
-    background: #171717;
-    color: white;
-    padding: 110px 15%;
-    text-align: center;
+  color:#fff; padding:92px 15%; text-align:center;
+  background:radial-gradient(circle at 15% 20%,rgba(255,139,54,.3),transparent 28%),
+    radial-gradient(circle at 85% 80%,rgba(109,67,216,.4),transparent 30%),
+    linear-gradient(120deg,#201936,#30204d);
 }
-
-.about > p:last-child {
-    max-width: 650px;
-    margin: 20px auto 0;
-    color: #c5c5c5;
-    font-size: 17px;
-    line-height: 1.9;
+.about .eyebrow { color:var(--yellow); }
+.about > p { max-width:720px; margin:12px auto 0; color:#e8e2f2; font-size:16px; }
+.about .about-capacity {
+  display:inline-block; margin:20px auto 4px; padding:10px 18px;
+  border:1px solid rgba(255,255,255,.25); border-radius:999px;
+  background:rgba(255,255,255,.09); color:#fff; font-weight:800;
 }
+.about > p:last-child { max-width:650px; color:#d2cadd; font-size:17px; line-height:1.9; }
 
-/* PARTNERS */
+/* Партнёрам */
+.partners { padding:96px 20px; text-align:center; background:linear-gradient(120deg,#fff0d6,#ffe2e9 55%,#eee5ff); }
+.partners .eyebrow { color:var(--purple); }
+.partners > p:not(.eyebrow) { color:#625d70; max-width:650px; margin:0 auto; font-size:16px; line-height:1.8; }
+.partners .primary-button { background:var(--ink); box-shadow:0 10px 24px rgba(23,21,43,.16); }
+.partners .primary-button:hover { background:var(--purple); }
 
-.partners {
-    padding: 110px 20px;
-    text-align: center;
-    background: #f7f7f7;
-}
-
-.partners > p:not(.eyebrow) {
-    color: #666666;
-    max-width: 650px;
-    margin: 0 auto;
-    font-size: 16px;
-    line-height: 1.8;
-}
-
-/* FOOTER */
-
+/* Подвал */
 .footer {
-    min-height: 120px;
-    padding: 30px 7%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #171717;
-    color: white;
+  min-height:115px; padding:28px 7%; display:flex; align-items:center;
+  justify-content:space-between; background:#17152b; color:#fff;
 }
+.footer .logo span { color:var(--yellow); }
+.footer p { font-size:13px; color:#bdb8cc; }
 
-.footer p {
-    font-size: 13px;
-    color: #aaaaaa;
+@media (max-width:1000px) {
+  .navigation { gap:18px; }
+  .product-grid { grid-template-columns:repeat(4,minmax(0,1fr)); }
 }
-
-/* MOBILE */
-
-@media (max-width: 850px) {
-
-    .header {
-        height: auto;
-        padding: 22px 5%;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .navigation {
-        order: 3;
-        width: 100%;
-        justify-content: center;
-        gap: 18px;
-        flex-wrap: wrap;
-    }
-
-    .navigation a {
-        font-size: 12px;
-    }
-
-    .header-button {
-        font-size: 11px;
-        padding: 11px 14px;
-    }
-
-    .hero {
-        grid-template-columns: 1fr;
-        padding: 65px 5%;
-        text-align: center;
-    }
-
-    .hero-content {
-        margin: auto;
-    }
-
-    .hero-description {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .hero h1 {
-        letter-spacing: -3px;
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 16px;
-    }
-
-    .product-card img {
-        height: 170px;
-    }
-
-    .products,
-    .about,
-    .partners {
-        padding: 75px 5%;
-    }
-
-    .footer {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
+@media (max-width:850px) {
+  .header { padding:18px 5%; flex-wrap:wrap; }
+  .navigation { order:3; width:100%; justify-content:center; flex-wrap:wrap; gap:16px; }
+  .navigation a { font-size:12px; }
+  .header-button { font-size:11px; padding:11px 16px; }
+  .hero { grid-template-columns:1fr; padding:58px 5%; text-align:center; gap:32px; }
+  .hero-content { margin:auto; }
+  .hero-description { margin-left:auto; margin-right:auto; }
+  .hero h1 { letter-spacing:-3px; }
+  .hero-image { max-width:720px; margin:auto; }
+  .product-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:15px; }
+  .product-card img { height:165px; }
+  .products,.about,.partners { padding:72px 5%; }
+  .footer { flex-direction:column; gap:12px; text-align:center; }
 }
-
-
-@media (max-width: 480px) {
-    .product-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        max-width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .product-card img {
-        height: 145px;
-    }
-
-    .hero h1 {
-        font-size: 54px;
-    }
+@media (max-width:520px) {
+  .logo { font-size:31px; }
+  .hero { padding:48px 5%; }
+  .hero h1 { font-size:52px; }
+  .product-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+  .product-card { padding:8px 8px 12px; border-radius:14px; }
+  .product-card img { height:145px; }
+  .product-card h3 { font-size:14px; }
+  .about .about-capacity { border-radius:14px; }
 }
