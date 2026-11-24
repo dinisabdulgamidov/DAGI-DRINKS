@@ -1,23 +1,88 @@
 <!DOCTYPE html>
-<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Каталог напитков DAGI</title><meta name="description" content="Каталог безалкогольных газированных напитков DAGI для торговых партнёров."><link rel="stylesheet" href="styles.css"><style>
-.catalog-page{max-width:1160px;margin:auto;padding:55px 5% 90px}.catalog-top{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.catalog-title{font-size:clamp(38px,6vw,70px);letter-spacing:-3px;line-height:1.05;margin:30px 0 15px}.catalog-lead{max-width:670px;color:#625d70;font-size:17px}.catalog-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px;margin:42px 0}.catalog-product{background:white;border:1px solid #eee4ec;border-radius:16px;padding:12px;text-align:center;break-inside:avoid}.catalog-product img{width:100%;height:180px;object-fit:contain;border-radius:10px;background:#f9f4ff}.catalog-product h2{font-size:15px;margin-top:9px}.catalog-contact{background:#251a3f;color:white;border-radius:22px;padding:28px}.catalog-contact a{color:#ffe36d;text-decoration:underline}.catalog-print{border:0;cursor:pointer}.catalog-meta{margin:24px 0;color:#625d70}
-@media(max-width:850px){.catalog-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:520px){.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.catalog-product img{height:140px}}
-@media print{@page{size:A4;margin:11mm}body{background:white;-webkit-print-color-adjust:exact;print-color-adjust:exact}.header,.catalog-print,.catalog-back,.footer{display:none!important}.catalog-page{padding:0;max-width:none}.catalog-title{font-size:35px;margin:10px 0}.catalog-lead{font-size:12px}.catalog-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;margin:20px 0}.catalog-product{padding:6px;border-radius:8px}.catalog-product img{height:100px}.catalog-product h2{font-size:10px}.catalog-contact{padding:15px;border-radius:10px;font-size:11px}.catalog-meta{font-size:11px;margin:10px 0}}
-</style></head><body>
-<header class="header"><a class="logo" href="index.html">DAGI<span>.</span></a><a class="header-button" href="index.html">На главную</a></header>
-<main class="catalog-page"><div class="catalog-top"><p class="eyebrow">DAGI · КАТАЛОГ ПРОДУКЦИИ</p><button class="primary-button catalog-print" type="button" onclick="window.print()">Сохранить в PDF / Печать ↗</button></div>
-<h1 class="catalog-title">Яркий вкус.<br>Яркий выбор.</h1><p class="catalog-lead">Каталог безалкогольных газированных напитков DAGI для магазинов, торговых сетей, ресторанов и оптовых партнёров.</p>
-<p class="catalog-meta">Производство: Республика Дагестан, Россия · Фактический выпуск: 1 000 000 банок в месяц</p>
-<div class="catalog-grid"><article class="catalog-product"><img src="images/PHOTO-2026-11-15-14-43-10.jpg" alt="DAGI Черника"><h2>Черника</h2></article>
-<article class="catalog-product"><img src="images/PHOTO-2026-11-15-16-01-20.jpg" alt="DAGI Цитрусовый микс"><h2>Цитрусовый микс</h2></article>
-<article class="catalog-product"><img src="images/PHOTO-2026-11-15-17-13-34.jpg" alt="DAGI Грейпфрут-малина"><h2>Грейпфрут-малина</h2></article>
-<article class="catalog-product"><img src="images/PHOTO-2026-11-15-19-41-52.jpg" alt="DAGI Кола"><h2>Кола</h2></article>
-<article class="catalog-product"><img src="images/PHOTO-2026-11-15-19-51-15.jpg" alt="DAGI Барбарис"><h2>Барбарис</h2></article>
-<article class="catalog-product"><img src="images/PHOTO-2026-11-15-20-41-32.jpg" alt="DAGI Груша"><h2>Груша</h2></article>
-<article class="catalog-product"><img src="images/PHOTO-2026-11-15-21-17-18.jpg" alt="DAGI Кола"><h2>Кола</h2></article>
-<article class="catalog-product"><img src="images/PHOTO-2026-11-15-21-52-10.jpg" alt="DAGI Манго"><h2>Манго</h2></article>
-<article class="catalog-product"><img src="images/PHOTO-2026-11-16-16-33-09.jpg" alt="DAGI Лайм"><h2>Лайм</h2></article>
-<article class="catalog-product"><img src="images/PHOTO-2026-11-16-17-34-57.jpg" alt="DAGI Клубника"><h2>Клубника</h2></article></div>
-<section class="catalog-contact"><h2>Сотрудничество с DAGI</h2><p>Для запроса коммерческого предложения и обсуждения поставок напишите: <a href="mailto:dinisabdulgamidov@mail.ru">dinisabdulgamidov@mail.ru</a></p></section>
-<p class="catalog-back"><a href="index.html">← Вернуться на сайт</a></p></main>
-<footer class="footer"><a class="logo" href="index.html">DAGI<span>.</span></a><p>© 2026 DAGI</p></footer></body></html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Каталог безалкогольных газированных напитков DAGI для торговых партнёров.">
+<title>Каталог продукции DAGI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.catalog-page{max-width:1240px;margin:auto;padding:42px 5% 80px}
+.catalog-top{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.catalog-back{font-size:12px;font-weight:900;text-decoration:underline;text-underline-offset:4px}
+.catalog-cover{margin-top:32px;padding:54px 6%;border-radius:26px;background:linear-gradient(120deg,#fff0d7,#ffd7ca 52%,#f0dafa);position:relative;overflow:hidden}
+.catalog-cover:after{content:"✳";position:absolute;right:5%;top:-42px;font-size:240px;line-height:1;color:rgba(255,255,255,.4)}
+.catalog-cover .eyebrow{position:relative;z-index:1}
+.catalog-title{position:relative;z-index:1;font-size:clamp(48px,8vw,88px);font-weight:900;letter-spacing:-5px;line-height:.98;margin:15px 0}
+.catalog-title em{font-style:normal;color:var(--red)}
+.catalog-lead{position:relative;z-index:1;max-width:570px;color:#62596a;font-size:14px;line-height:1.8}
+.catalog-meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:25px}
+.catalog-meta span{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.65);font-size:10px;font-weight:900}
+.catalog-section-heading{display:flex;justify-content:space-between;align-items:end;gap:20px;margin:48px 0 20px}
+.catalog-section-heading h2{font-size:30px;letter-spacing:-1.5px}
+.catalog-section-heading p{font-size:11px;color:#81798a}
+.catalog-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.catalog-product{min-width:0;background:white;border:1px solid #eee7ee;border-radius:16px;padding:9px 9px 14px;break-inside:avoid}
+.catalog-product img{display:block;width:100%;height:175px;object-fit:contain;border-radius:10px;background:linear-gradient(145deg,#fff0e5,#f3edff)}
+.catalog-product .catalog-number{display:block;margin:11px 3px 3px;font-size:8px;letter-spacing:1px;color:#a39aaa;font-weight:900}
+.catalog-product h2{margin:0 3px;font-size:14px}
+.catalog-spec{margin:4px 3px 0;color:#807887;font-size:10px}
+.catalog-contact{margin-top:44px;padding:30px;border-radius:22px;background:var(--ink);color:white;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.catalog-contact h2{font-size:27px;letter-spacing:-1px}
+.catalog-contact p{margin-top:7px;color:#d0c9d8;font-size:12px;max-width:600px}
+.catalog-contact a{color:var(--yellow);text-decoration:underline;text-underline-offset:3px;font-weight:800}
+.catalog-contact .catalog-phone{white-space:nowrap;font-size:13px}
+.catalog-footnote{margin-top:16px;color:#81798a;font-size:10px}
+@media(max-width:850px){.catalog-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.catalog-product img{height:160px}.catalog-contact{align-items:flex-start;flex-direction:column}}
+@media(max-width:520px){.catalog-page{padding-top:25px}.catalog-cover{padding:38px 7%}.catalog-title{font-size:52px;letter-spacing:-3px}.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.catalog-product img{height:145px}.catalog-section-heading{align-items:flex-start;flex-direction:column}.catalog-contact{padding:24px}.catalog-contact h2{font-size:23px}}
+@media print{
+ @page{size:A4;margin:10mm}
+ body{background:white!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+ .site-header,.catalog-print,.catalog-back,.site-footer{display:none!important}
+ .catalog-page{max-width:none;padding:0}
+ .catalog-cover{margin-top:0;padding:24px 28px;border-radius:10px}
+ .catalog-cover:after{font-size:130px;top:-25px}
+ .catalog-title{font-size:42px;letter-spacing:-2px;margin:7px 0}
+ .catalog-lead{font-size:9px}
+ .catalog-meta{margin-top:10px}
+ .catalog-meta span{font-size:8px;padding:5px 8px}
+ .catalog-section-heading{margin:20px 0 10px}
+ .catalog-section-heading h2{font-size:20px}
+ .catalog-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:7px}
+ .catalog-product{padding:5px;border-radius:7px}
+ .catalog-product img{height:92px}
+ .catalog-product .catalog-number{font-size:6px;margin-top:5px}
+ .catalog-product h2{font-size:9px}
+ .catalog-spec{font-size:7px}
+ .catalog-contact{margin-top:18px;padding:15px;border-radius:9px}
+ .catalog-contact h2{font-size:17px}
+ .catalog-contact p,.catalog-contact .catalog-phone{font-size:8px}
+ .catalog-footnote{font-size:7px}
+}
+</style>
+</head>
+<body>
+<header class="site-header"><a class="brand" href="index.html">DAGI<span>.</span></a><a class="header-cta" href="index.html">На главную <span>↗</span></a></header>
+<main class="catalog-page">
+<div class="catalog-top"><span class="eyebrow">DAGI · КАТАЛОГ ПРОДУКЦИИ</span><button class="button button-dark catalog-print" type="button" onclick="window.print()">Сохранить в PDF / Печать ↗</button></div>
+<section class="catalog-cover"><span class="eyebrow">ЯРКАЯ ЛИНЕЙКА НАПИТКОВ</span><h1 class="catalog-title">Вкус, который<br><em>заметен.</em></h1><p class="catalog-lead">Каталог безалкогольных газированных напитков DAGI для магазинов, торговых сетей, ресторанов и оптовых партнёров.</p><div class="catalog-meta"><span>10 позиций в линейке</span><span>Алюминиевая банка · 330 мл</span><span>Производство · Дагестан, Россия</span></div></section>
+<div class="catalog-section-heading"><h2>Ассортимент DAGI</h2><p>10 ВКУСОВ · 330 МЛ</p></div>
+<div class="catalog-grid">
+<article class="catalog-product"><img src="images/PHOTO-2026-11-15-14-43-10.jpg" alt="DAGI Черника"><span class="catalog-number">01 / DAGI</span><h2>Черника</h2><p class="catalog-spec">Газированный напиток · 330 мл</p></article>
+<article class="catalog-product"><img src="images/PHOTO-2026-11-15-16-01-20.jpg" alt="DAGI Цитрусовый микс"><span class="catalog-number">02 / DAGI</span><h2>Цитрусовый микс</h2><p class="catalog-spec">Газированный напиток · 330 мл</p></article>
+<article class="catalog-product"><img src="images/PHOTO-2026-11-15-17-13-34.jpg" alt="DAGI Грейпфрут-малина"><span class="catalog-number">03 / DAGI</span><h2>Грейпфрут-малина</h2><p class="catalog-spec">Газированный напиток · 330 мл</p></article>
+<article class="catalog-product"><img src="images/PHOTO-2026-11-15-19-41-52.jpg" alt="DAGI Кола"><span class="catalog-number">04 / DAGI</span><h2>Кола</h2><p class="catalog-spec">Газированный напиток · 330 мл</p></article>
+<article class="catalog-product"><img src="images/PHOTO-2026-11-15-19-51-15.jpg" alt="DAGI Барбарис"><span class="catalog-number">05 / DAGI</span><h2>Барбарис</h2><p class="catalog-spec">Газированный напиток · 330 мл</p></article>
+<article class="catalog-product"><img src="images/PHOTO-2026-11-15-20-41-32.jpg" alt="DAGI Груша"><span class="catalog-number">06 / DAGI</span><h2>Груша</h2><p class="catalog-spec">Газированный напиток · 330 мл</p></article>
+<article class="catalog-product"><img src="images/PHOTO-2026-11-15-21-17-18.jpg" alt="DAGI Кола"><span class="catalog-number">07 / DAGI</span><h2>Кола</h2><p class="catalog-spec">Газированный напиток · 330 мл</p></article>
+<article class="catalog-product"><img src="images/PHOTO-2026-11-15-21-52-10.jpg" alt="DAGI Манго"><span class="catalog-number">08 / DAGI</span><h2>Манго</h2><p class="catalog-spec">Газированный напиток · 330 мл</p></article>
+<article class="catalog-product"><img src="images/PHOTO-2026-11-16-16-33-09.jpg" alt="DAGI Лайм"><span class="catalog-number">09 / DAGI</span><h2>Лайм</h2><p class="catalog-spec">Газированный напиток · 330 мл</p></article>
+<article class="catalog-product"><img src="images/PHOTO-2026-11-16-17-34-57.jpg" alt="DAGI Клубника"><span class="catalog-number">10 / DAGI</span><h2>Клубника</h2><p class="catalog-spec">Газированный напиток · 330 мл</p></article>
+</div>
+<section class="catalog-contact"><div><h2>Заинтересовала линейка DAGI?</h2><p>Свяжитесь с нами, чтобы обсудить ассортимент, объёмы и условия сотрудничества.</p><p>Почта: <a href="mailto:dinisabdulgamidov@mail.ru">dinisabdulgamidov@mail.ru</a></p></div><a class="catalog-phone" href="tel:+79289370070">+7 (928) 937-00-70 ↗</a></section>
+<p class="catalog-footnote">Фактический объём производства — 1 000 000 банок в месяц. Производство: Республика Дагестан, Россия.</p>
+<p class="catalog-back"><a href="index.html">← Вернуться на сайт DAGI</a></p>
+</main>
+<footer class="site-footer"><a class="brand brand-footer" href="index.html">DAGI<span>.</span></a><p>© 2026 DAGI. Все права защищены.</p><a href="mailto:dinisabdulgamidov@mail.ru">Связаться с нами ↗</a></footer>
+</body></html>
