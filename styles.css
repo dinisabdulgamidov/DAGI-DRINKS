@@ -150,3 +150,34 @@ img{height:auto}
   a{ text-decoration:none!important }
   .catalog-product,.catalog-cover,.catalog-contact{break-inside:avoid}
 }
+
+
+/* Homepage hero: use the supplied complete poster artwork without cropping */
+.hero.hero-poster{
+  display:block;
+  position:relative;
+  width:100%;
+  min-height:0;
+  height:auto;
+  padding:0;
+  margin:0;
+  overflow:hidden;
+  background:#ffe3dc;
+}
+.hero.hero-poster::before,
+.hero.hero-poster::after{content:none!important;display:none!important}
+.hero-poster-image{
+  display:block;
+  width:100%;
+  height:auto;
+  max-width:none;
+  object-fit:contain;
+  object-position:center;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+}
+@media(max-width:700px){
+  .hero.hero-poster{min-height:0}
+  .hero-poster-image{width:100%;height:auto;object-fit:contain}
+}
