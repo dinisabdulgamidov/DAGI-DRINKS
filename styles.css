@@ -145,3 +145,24 @@ a { color:inherit; text-decoration:none; }
   .product-card h3 { font-size:14px; }
   .about .about-capacity { border-radius:14px; }
 }
+
+/* Дополнительные разделы для партнёров */
+.catalog-actions { margin-top:34px; }
+.catalog-link { display:inline-block; padding:13px 22px; border:2px solid var(--ink); border-radius:999px; font-weight:800; font-size:14px; transition:.2s; }
+.catalog-link:hover { background:var(--ink); color:white; }
+.production { padding:94px 7%; background:#fff9ee; }
+.production-intro { max-width:760px; margin:0 auto 38px; text-align:center; }
+.production h2 { font-size:clamp(32px,4vw,48px); font-weight:950; letter-spacing:-2px; line-height:1.12; margin-bottom:18px; }
+.production-intro > p:last-child { color:#625d70; font-size:16px; }
+.production-facts { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; max-width:1100px; margin:auto; }
+.fact { min-width:0; border-radius:22px; padding:28px 22px; background:white; border:1px solid #f3e8dc; box-shadow:0 12px 28px rgba(40,25,65,.06); }
+.fact strong { display:block; font-size:clamp(22px,3vw,38px); font-weight:950; letter-spacing:-1.5px; color:#ef3652; line-height:1.1; }
+.fact span { display:block; margin-top:12px; color:#625d70; font-size:14px; }
+.production-note { max-width:800px; margin:22px auto 0; text-align:center; color:#7d7483; font-size:13px; }
+.partner-types { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; max-width:780px; margin:28px auto 12px; }
+.partner-types span { border-radius:999px; background:rgba(255,255,255,.8); padding:9px 16px; font-weight:800; font-size:13px; border:1px solid rgba(70,40,80,.08); }
+.partners .partner-help { margin-top:18px!important; }
+.partners .contact-email { margin-top:20px!important; font-size:14px!important; overflow-wrap:anywhere; }
+.contact-email a { color:#4525aa; text-decoration:underline; text-underline-offset:3px; font-weight:800; }
+.footer-email { font-size:13px; color:#f3e6ff; text-decoration:underline; }
+@media(max-width:850px){.production{padding:72px 5%}.production-facts{grid-template-columns:1fr;max-width:520px}.fact{padding:24px}.fact strong{font-size:30px}}
