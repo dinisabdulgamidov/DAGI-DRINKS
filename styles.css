@@ -1,0 +1,293 @@
+
+/* =================================
+   DAGI — PREMIUM WEBSITE
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #171717;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* HEADER */
+
+.header {
+    height: 90px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: -2px;
+}
+
+.logo span {
+    color: #ed2939;
+}
+
+.navigation {
+    display: flex;
+    gap: 35px;
+}
+
+.navigation a {
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: #ed2939;
+}
+
+.header-button {
+    background: #171717;
+    color: white;
+    padding: 13px 23px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.header-button:hover {
+    background: #ed2939;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 600px;
+    padding: 70px 7%;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    gap: 35px;
+    overflow: hidden;
+    background: #f7f7f7;
+}
+
+.hero-content {
+    max-width: 520px;
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 800;
+    color: #ed2939;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(52px, 6vw, 82px);
+    line-height: 0.98;
+    letter-spacing: -5px;
+    font-weight: 900;
+}
+
+.hero h1 span {
+    color: #ed2939;
+}
+
+.hero-description {
+    margin-top: 28px;
+    max-width: 420px;
+    color: #666666;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.primary-button {
+    display: inline-block;
+    margin-top: 32px;
+    background: #ed2939;
+    color: white;
+    padding: 17px 29px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-button:hover {
+    background: #c91d2d;
+    transform: translateY(-3px);
+}
+
+/* HERO IMAGE */
+
+.hero-image {
+    width: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* PRODUCTS */
+
+.products {
+    padding: 110px 7%;
+    text-align: center;
+}
+
+.products h2,
+.about h2,
+.partners h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin-bottom: 18px;
+}
+
+.products > p:not(.eyebrow) {
+    color: #777777;
+    font-size: 16px;
+}
+
+.product-photo {
+    margin-top: 55px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.product-photo img {
+    display: block;
+    width: 100%;
+}
+
+/* ABOUT */
+
+.about {
+    background: #171717;
+    color: white;
+    padding: 110px 15%;
+    text-align: center;
+}
+
+.about > p:last-child {
+    max-width: 650px;
+    margin: 20px auto 0;
+    color: #c5c5c5;
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+/* PARTNERS */
+
+.partners {
+    padding: 110px 20px;
+    text-align: center;
+    background: #f7f7f7;
+}
+
+.partners > p:not(.eyebrow) {
+    color: #666666;
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+
+.footer {
+    min-height: 120px;
+    padding: 30px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #171717;
+    color: white;
+}
+
+.footer p {
+    font-size: 13px;
+    color: #aaaaaa;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .header {
+        height: auto;
+        padding: 22px 5%;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .navigation {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .navigation a {
+        font-size: 12px;
+    }
+
+    .header-button {
+        font-size: 11px;
+        padding: 11px 14px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 65px 5%;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin: auto;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .products,
+    .about,
+    .partners {
+        padding: 75px 5%;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
