@@ -181,3 +181,43 @@ img{height:auto}
   .hero.hero-poster{min-height:0}
   .hero-poster-image{width:100%;height:auto;object-fit:contain}
 }
+
+
+/* Full-bleed campaign artwork — cache-busted homepage hero */
+html body main section.hero.hero-poster{
+  display:block!important;
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:none!important;
+  min-height:0!important;
+  height:auto!important;
+  margin:0!important;
+  padding:0!important;
+  overflow:hidden!important;
+  position:relative!important;
+  grid-template-columns:none!important;
+  gap:0!important;
+  background:#ffe3dc!important;
+}
+html body main section.hero.hero-poster::before,
+html body main section.hero.hero-poster::after{
+  display:none!important;
+  content:none!important;
+}
+html body main section.hero.hero-poster img.hero-poster-image{
+  display:block!important;
+  position:static!important;
+  width:100%!important;
+  max-width:none!important;
+  min-width:0!important;
+  height:auto!important;
+  max-height:none!important;
+  margin:0!important;
+  padding:0!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  transform:none!important;
+  border:0!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+}
