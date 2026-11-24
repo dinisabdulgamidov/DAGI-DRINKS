@@ -166,3 +166,9 @@ a { color:inherit; text-decoration:none; }
 .contact-email a { color:#4525aa; text-decoration:underline; text-underline-offset:3px; font-weight:800; }
 .footer-email { font-size:13px; color:#f3e6ff; text-decoration:underline; }
 @media(max-width:850px){.production{padding:72px 5%}.production-facts{grid-template-columns:1fr;max-width:520px}.fact{padding:24px}.fact strong{font-size:30px}}
+
+.contact-options { display:flex; justify-content:center; flex-wrap:wrap; gap:12px; margin:24px auto 8px; }
+.contact-options a { display:inline-block; padding:13px 20px; border-radius:999px; font-size:14px; font-weight:850; transition:transform .2s,background .2s; }
+.contact-options a:hover { transform:translateY(-2px); }
+.contact-phone { background:#fff; color:var(--ink); border:1px solid rgba(23,21,43,.12); }
+.contact-whatsapp { background:#218c59; color:#fff!important; }
